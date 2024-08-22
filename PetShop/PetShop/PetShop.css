@@ -1,0 +1,52 @@
+body{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: #CCFF99;
+}
+
+header {
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+    background-color: #B2FF66; 
+}
+
+#Logo {
+    flex: 1; 
+}
+
+#Logo img {
+    max-width: 150px; 
+    height: auto;
+}
+
+#Pesquisa {
+    display: flex;
+    align-items: center; 
+}
+
+#Pesquisa input[type="search"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#Pesquisa button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#Pesquisa button img {
+    width: 24px; 
+    height: auto; 
+}
