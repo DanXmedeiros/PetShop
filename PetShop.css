@@ -1,0 +1,108 @@
+
+body {
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #CCFF99;
+}
+
+header {
+    display: flex;
+    align-items: center; 
+    padding: 10px;
+    background-color: #B2FF66; 
+}
+
+#Menu {
+    text-decoration: none;
+}
+
+#Logo {
+    margin-left: 20px;
+    margin-right: 25px;
+    width: 150px;
+}
+
+#Logo img {
+    max-width: 150px; 
+    height: auto;
+}
+
+#Pesquisa {
+    display: flex;
+    align-items: center; 
+}
+
+#Pesquisa input[type="search"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#Pesquisa button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#Pesquisa button img {
+    width: 24px; 
+    height: auto; 
+}
+#Banner {
+    display: flex;
+    width: 90%; 
+    height: auto; 
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.carrossel {
+    width: 80%;
+    max-width: 600px; 
+    height: 300px;
+    margin: 4px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 1050%; 
+    animation: slide 50s infinite;
+}
+
+.slide {
+    width: 11.111%;
+    flex-shrink: 0;
+    height: 10%; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.slide img {
+    width: 30%;
+    height: auto; 
+    max-height: 50%;
+    display: block;
+
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    10% { transform: translateX(-11.111%); }
+    20% { transform: translateX(-22.222%); }
+    30% { transform: translateX(-33.333%); }
+    40% { transform: translateX(-44.444%); }
+    50% { transform: translateX(-55.555%); }
+    60% { transform: translateX(-66.666%); }
+    70% { transform: translateX(-77.777%); }
+    80% { transform: translateX(-88.888%); }
+    90% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+}
