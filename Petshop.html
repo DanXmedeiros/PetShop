@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="PetShop.css">
+    
     <title>PetShop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +24,15 @@
         <div class="icone"><a href="login.html"><img src="login2.png" alt=""></a></div>
 
     </header>
+
+    <article class="categorias">
+        <a class="Animais silvestres" href="#">Animais silvestres</a>
+        <a class="Brinquedos" href="#">Brinquedos</a>
+        <a class="Cachorros" href="#">Cachorros</a>
+        <a class="Gatos" href="#">Gatos</a>
+
+
+    </article>
     
     <section>
         <img id="Banner" src="Banner.webp" alt="Poster">
@@ -59,6 +69,93 @@
             </section>
         </section>
     </section>
+
+    <main>
+        <div class="produtos">
+            <!-- Produto 1 -->
+            <article class="cartoes">
+                <div class="desconto">
+                    <p>10% OFF</p>
+                </div>
+                <div class="image">
+                    <img src="racao4.webp" alt="Ração Gran Plus 20kg">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Ração Gran Plus - Sabor Carne 20kg</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$220,00</span>
+                        <span class="Preco_desconto">R$198,00</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.7</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+        
+            <!-- Produto 2 -->
+            <article class="cartoes">
+                <div class="desconto">
+                    <p>15% OFF</p>
+                </div>
+                <div class="image">
+                    <img src="racao2.webp" alt="Ração Nattú 10kg">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Ração Nattú - Adulto 10kg</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$99,90</span>
+                        <span class="Preco_desconto">R$84,90</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.5</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+        
+            <!-- Produto 3 -->
+            <article class="cartoes">
+                <div class="desconto">
+                    <p>20% OFF</p>
+                </div>
+                <div class="image">
+                    <img src="racao3.webp" alt="Ração Pro Plan 15kg">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Ração Pro Plan - Adulto 15kg</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$191,92</span>
+                        <span class="Preco_desconto">R$239,90</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.8</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+        
+            <!-- Produto 4 -->
+            <article class="cartoes">
+                <div class="desconto">
+                    <p>25% OFF</p>
+                </div>
+                <div class="image">
+                    <img src="raçao1.webp" alt="Ração Golden 7kg">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Ração Golden filhote - Sabor Frango e Vegetais 7kg</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$149,90</span>
+                        <span class="Preco_desconto">R$112,42</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.9</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+    </main>
 
     <footer> <hr>
         <ul id="Menu" style="list-style: none;">
