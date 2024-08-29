@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #CCFF99;
+    background-color:#87CEEB;
 }
 
 header {
     display: flex;
     align-items: center; 
     padding: 10px;
-    background-color: whitesmoke; 
+    background-color:#FF7F50; 
 }
 
 #Menu {
@@ -104,49 +104,9 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.carrossel {
-    width: 80%;
-    max-width: 600px; 
-    height: 300px;
-    margin: 4px auto;
-    overflow: hidden;
-}
-
-.slides {
-    display: flex;
-    width: 1050%; 
-    animation: slide 50s infinite;
-}
-
-.slide {
-    width: 11.111%;
-    flex-shrink: 0;
-    height: 10%; 
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-
-.slide img {
-    width: 30%;
-    height: auto; 
-    max-height: 50%;
-    display: block;
-
-}
-
-@keyframes slide {
-    0% { transform: translateX(0%); }
-    10% { transform: translateX(-11.111%); }
-    20% { transform: translateX(-22.222%); }
-    30% { transform: translateX(-33.333%); }
-    40% { transform: translateX(-44.444%); }
-    50% { transform: translateX(-55.555%); }
-    60% { transform: translateX(-66.666%); }
-    70% { transform: translateX(-77.777%); }
-    80% { transform: translateX(-88.888%); }
-    90% { transform: translateX(-100%); }
-    100% { transform: translateX(0%); }
+#Racoes{
+    align-items: center;
+    flex-direction: column;
 }
 
 .produtos {
