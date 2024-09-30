@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="PetShop.css">
-    
     <title>PetShop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <header id="header">
         <div id="Logo">
-        <a href="Petshop.html"> 
-        <img src="img/Logo.png" alt="Logo"></a>
+            <a href="Petshop.html">
+                <img src="img/Logo.png" alt="Logo">
+            </a>
         </div>
 
         <div id="Pesquisa">
@@ -25,12 +24,11 @@
         </div>
 
         <div class="icone"><a href="login.html"><img src="img/login2.png" alt="Login"></a></div>
-
     </header>
 
     <article class="categorias">
         <a class="Animais silvestres" href="#">Animais silvestres</a>
-        <a class="Brinquedos" href="#">Brinquedos</a>
+        <a class="Brinquedos" href="Brinquedos.html">Brinquedos</a>
         <a class="Cachorros" href="#">Cachorros</a>
         <a class="Gatos" href="#">Gatos</a>
     </article>
@@ -47,7 +45,7 @@
         <header id="Racoes"><h1>Rações</h1></header>
         <div class="produtos">
             
-            <article class="cartoes">
+            <article class="cartoes" data-name="Ração Gran Plus - Sabor Carne 20kg" data-price="198.00">
                 <div class="desconto">
                     <p>10% OFF</p>
                 </div>
@@ -67,7 +65,7 @@
                 <button class="comprar" onclick="addToCart(event)">Comprar</button>
             </article>
         
-            <article class="cartoes">
+            <article class="cartoes" data-name="Ração Nattú - Adulto 10kg" data-price="84.90">
                 <div class="desconto">
                     <p>15% OFF</p>
                 </div>
@@ -87,7 +85,7 @@
                 <button class="comprar" onclick="addToCart(event)">Comprar</button>
             </article>
         
-            <article class="cartoes">
+            <article class="cartoes" data-name="Ração Pro Plan - Adulto 15kg" data-price="191.92">
                 <div class="desconto">
                     <p>20% OFF</p>
                 </div>
@@ -107,7 +105,7 @@
                 <button class="comprar" onclick="addToCart(event)">Comprar</button>
             </article>
         
-            <article class="cartoes">
+            <article class="cartoes" data-name="Ração Golden filhote - Sabor Frango e Vegetais 7kg" data-price="112.42">
                 <div class="desconto">
                     <p>25% OFF</p>
                 </div>
@@ -126,6 +124,7 @@
                 </div>
                 <button class="comprar" onclick="addToCart(event)">Comprar</button>
             </article>
+        </div>
     </main>
 
     <footer> <hr>
@@ -135,6 +134,8 @@
             <li><a href="#">Contato</a></li>
         </ul>
     </footer>
-        
+
+    <script src="PetShop.js"></script>
 
 </body>
+</html>
