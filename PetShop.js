@@ -1,24 +1,25 @@
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
 function addToCart(event) {
-    const button = event.target;
-    const product = button.closest(".cartoes");
-    
-    const name = product.dataset.name;
-    const price = parseFloat(product.dataset.price);
+    const productCard = event.target.closest('.cartoes');
+    const productName = productCard.querySelector('.card-name').innerText;
+    const productPrice = productCard.querySelector('.preco').innerText;
+    const productImage = productCard.querySelector('.image img').src;
 
-    const productObj = { name, price };
-    
-    let cart = localStorage.getItem('cart');
-    if (cart) {
-        cart = JSON.parse(cart);
+    const product = {
+        name: productName,
+        price: productPrice,
+        image: productImage,
+        quantity: 1
+    };
+
+    const existingProductIndex = cart.findIndex(item => item.name === productName);
+    if (existingProductIndex >= 0) {
+        cart[existingProductIndex].quantity += 1;
     } else {
-        cart = []; 
+        cart.push(product);
     }
-    
-    cart.push(productObj);
-    
+
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    alert(`${name} foi adicionado ao carrinho.`);
+    alert(`${productName} foi adicionado ao carrinho!`);
 }
-
-

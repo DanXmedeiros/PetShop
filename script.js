@@ -1,73 +1,47 @@
-function addToCart(event) {
-    alert("Item foi adicionado ao carrinho");
+function loadCart() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.querySelector('.cart-items');
+    cartContainer.innerHTML = '';
 
-    const card = event.target.closest('.cartoes');
-    const productName = card.querySelector('.card-name').textContent;
-    const productPrice = parseFloat(card.getAttribute('data-price'));
-    const productImage = card.querySelector('.image img').src;
+    let totalPrice = 0;
 
-    const productData = {
-        name: productName,
-        price: productPrice,
-        image: productImage
-    };
+    cartItems.forEach((item, index) => {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('cart-item');
+        itemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}".">
+            <p>${item.name} - ${item.price}</p>
+            <button onclick="changeQuantity(${index}, -1)">-</button>
+            <span class="quantity">${item.quantity}</span>
+            <button onclick="changeQuantity(${index}, 1)">+</button>
+            <button onclick="removeFromCart(${index})">Remover</button>
+        `;
+        cartContainer.appendChild(itemDiv);
 
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const priceValue = parseFloat(item.price.replace('R$', '').replace(',', '.')) * item.quantity;
+        totalPrice += priceValue;
+    });
 
-    cart.push(productData);
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    window.location.href = 'compras.html';
+    document.getElementById('total-price').innerText = totalPrice.toFixed(2).replace('.', ',');
 }
 
-function loadCartItems() {
-    let cart = localStorage.getItem('cart');
-    if (cart) {
-        cart = JSON.parse(cart);
-        
-        const cartItemsContainer = document.querySelector('.cart-items');
-        cartItemsContainer.innerHTML = ''; 
-        let totalPrice = 0;
+function changeQuantity(index, change) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItems[index].quantity += change;
 
-        cart.forEach((item, index) => {
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item');
-            cartItem.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" class="item-image">
-                <p>${item.name}</p>
-                <p class="item-price">R$${item.price.toFixed(2)}</p>
-                <button class="remove-btn" data-index="${index}">Remover</button>
-            `;
-            cartItemsContainer.appendChild(cartItem);
-
-            totalPrice += item.price;
-        });
-
-        document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-
-        document.querySelectorAll('.remove-btn').forEach(btn => {
-            btn.addEventListener('click', removeItem);
-        });
-    } else {
-        document.querySelector('.cart-items').innerHTML = '<p>O carrinho está vazio.</p>';
+    if (cartItems[index].quantity < 1) {
+        cartItems[index].quantity = 1;
     }
+
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    loadCart();
 }
 
-function removeItem(event) {
-    const index = event.target.getAttribute('data-index');
-    let cart = JSON.parse(localStorage.getItem('cart'));
-
-    cart.splice(index, 1);
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    loadCartItems();
+function removeFromCart(index) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItems.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    loadCart();
 }
 
-window.onload = loadCartItems;
-
-document.querySelector('.checkout-btn').addEventListener('click', () => {
-    alert('Compra finalizada com sucesso!');
-    localStorage.removeItem('cart');  
-    window.location.href = 'Petshop.html'; 
-});
+window.onload = loadCart;

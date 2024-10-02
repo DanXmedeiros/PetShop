@@ -1,9 +1,10 @@
+
 body {
     font-family: "Lora", serif;
     margin: 0;
     padding: 0;
-
-    background-color: #87CEEB;
+    box-sizing: border-box;
+    background-color:#87CEEB;
 }
 
 header {
@@ -11,21 +12,27 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 120px; 
+    height: 120px;
     position: relative;
     z-index: 1001;
     background-color: #FF7F50;
-    padding: 0 20px;
+    padding: 0;
 }
 
 #Logo {
+    margin-left: 15px;
+    margin-right: 15px;
     width: 150px;
-    margin: 0;
 }
 
 #Logo img {
     max-width: 150px; 
     height: auto;
+    margin-right: auto;
+}
+
+.icone {
+    width: 4%;
 }
 
 #Pesquisa {
@@ -37,7 +44,6 @@ header {
     position: relative;
     width: 500px; 
     height: 40px; 
-    margin: 0;
 }
 
 #Pesquisa input[type="search"] {
@@ -78,7 +84,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 110%;
+    width: 100%;
     height: 50px;
     background-color: whitesmoke;
     border: 2px solid gainsboro;
@@ -116,30 +122,6 @@ header {
     transform: scale(1.1);
 }
 
-.product-list {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem auto;
-    width: 80%;
-}
-
-.product {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px;
-}
-
-.product img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
 .cart {
     width: 80%;
     margin: 2rem auto;
@@ -151,17 +133,8 @@ header {
 
 .cart-item {
     display: flex;
-    justify-content: space-between; /* Aligns children to the edges */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 10px;
-}
-
-.item-price {
-    margin-left: auto; /* Pushes the price to the right */
-}
-
-.remove-btn {
-    margin-left: 10px; /* Space between price and remove button */
+    align-items: center; 
+    margin-bottom: 10px; 
 }
 
 .cart-item img {
@@ -174,6 +147,19 @@ header {
 
 .item-details {
     flex: 1;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.button-group {
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 5px; 
+}
+
+.cart-item button {
+    margin: 0 2px;
+    padding: 0.5rem; 
 }
 
 button {
@@ -187,7 +173,7 @@ button {
 }
 
 button:hover {
-    background-color: #FF7F50;
+    background-color: #FF6347; 
 }
 
 .total {
@@ -196,6 +182,7 @@ button:hover {
 
 .checkout-btn {
     font-size: 1.25rem;
+    margin-top: 20px; 
 }
 
 header * {
