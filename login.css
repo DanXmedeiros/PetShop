@@ -1,9 +1,0 @@
-body{
-    background-image: url(img/login.webp);
-}
-
-@media only screen and (max-width: 768px) {
-    .body {
-        max-width: 90%;
-    }
-}

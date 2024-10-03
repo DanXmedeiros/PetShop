@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="PetShop.css">
-    
-    <title>Brinquedos da PetLand</title>
+    <link rel="stylesheet" href="CSS/brinquedos.css">
+    <title>PetShop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     <header id="header">
         <div id="Logo">
-        <a href="Petshop.html"> 
-        <img src="img/Logo.png" alt="Logo"></a>
+            <a href="Petshop.html">
+                <img src="img/Logo.png" alt="Logo">
+            </a>
         </div>
 
         <div id="Pesquisa">
@@ -25,14 +24,107 @@
         </div>
 
         <div class="icone"><a href="login.html"><img src="img/login2.png" alt="Login"></a></div>
-
     </header>
 
-    <article class="categorias"></article>
+    <article class="categorias">
         <a class="Animais silvestres" href="#">Animais silvestres</a>
         <a class="Brinquedos" href="Brinquedos.html">Brinquedos</a>
         <a class="Cachorros" href="#">Cachorros</a>
         <a class="Gatos" href="#">Gatos</a>
     </article>
+
+    <article class="carrinho">
+        <a href="carrinho.html"><img src="img/carrinho.png" alt="Carrinho"></a>
+    </article>
+
+    <main>
+        <section>
+            <img id="Banner" src="img/poster.png" alt="Poster">
+        </section>
+        <div class="produtos">
+            
+            <article class="cartoes">
+                <div class="image">
+                    <img src="img/brinquedobola.webp" alt="Brinquedo de Corda para Cachorro Duplo com Bola">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Brinquedo de Corda para Cachorro Duplo com Bola</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$35,00</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.7</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+        
+            <article class="cartoes">
+                <div class="image">
+                    <img src="img/bolainterativa.jpg" alt="Bola inteligente interativa para animais de estimação">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Bola inteligente interativa para animais de estimação</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$99,90</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.5</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+        
+            <article class="cartoes">
+                <div class="image">
+                    <img src="img/brinquedo_de_pelucia.webp" alt="Brinquedo De Pelúcia Mike">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Brinquedo De Pelúcia Mike</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$80,00</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.8</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+        
+            <article class="cartoes">
+                <div class="image">
+                    <img src="img/petball.webp" alt="PetBall Interativa">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">PetBall Interativa</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$60,00</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.4</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+
+            <article class="cartoes">
+                <div class="image">
+                    <img src="img/gato.jpg" alt="Arranhador Para Gato">
+                </div>
+                <div class="card-text">
+                    <p class="card-name">Arranhador Para Gato</p>
+                </div>
+                <div class="card">
+                    <div class="precos">
+                        <span class="preco">R$40,00</span>
+                    </div>
+                    <p class="card-estrela">&starf;&starf;&starf;&starf;&starf; 4.0</p>
+                </div>
+                <button class="comprar" onclick="addToCart(event)">Comprar</button>
+            </article>
+        </div>
+    </main>
+
+    <script src="JavaScript/brinquedo.js"></script>
 
 </body>
